@@ -20,6 +20,7 @@
 		6DB74EB98B93210972F1A48E /* ESPNAuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AE4132BCAE79E8BCFECD50 /* ESPNAuthWebView.swift */; };
 		6EC94D4C94B1FDB7A571767E /* ClaudeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC48F0A836D3B82C030981 /* ClaudeClient.swift */; };
 		75604C89A760273CFF103EC2 /* ESPNProTeamMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15414CBE63618A0E50B020 /* ESPNProTeamMap.swift */; };
+		761C49DBBCAA3731F69CE384 /* ManualCookieEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868D4D509F73788996F98914 /* ManualCookieEntryView.swift */; };
 		793B43E4A0F7B2D51C88FF2C /* ESPNCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BA4C5A9F683FB885A4D93B /* ESPNCredentials.swift */; };
 		7BCA4CB0AE00D5D5257C9AB3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1140CEA6B5E59D2919F5ED /* RootView.swift */; };
 		7F734D529CBC4F0F96C0AB80 /* ESPNAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370C40A1B4D9301ABFD43B6E /* ESPNAuthManager.swift */; };
@@ -81,6 +82,7 @@
 		75E940DF922E4292E71B9E46 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = League.swift; path = League.swift; sourceTree = "<group>"; };
 		789E4694888F573BE695A15D /* LeagueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeagueStore.swift; path = LeagueStore.swift; sourceTree = "<group>"; };
 		7DCC46ACA4643BD540C3AF7A /* RecommendationEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationEngineTests.swift; path = RecommendationEngineTests.swift; sourceTree = "<group>"; };
+		868D4D509F73788996F98914 /* ManualCookieEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ManualCookieEntryView.swift; path = ManualCookieEntryView.swift; sourceTree = "<group>"; };
 		8CFA4D5191F54F0A79201409 /* SecureConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecureConfig.swift; path = SecureConfig.swift; sourceTree = "<group>"; };
 		A2C24386A12ADD633306A718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF71473A874612FEB5A266EC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = AppState.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				EC4F43359EBC3B8334446EBF /* LeagueSetupViewModel.swift */,
 				CE31474C8C4581AB031A3D5D /* LeagueSetupView.swift */,
+				868D4D509F73788996F98914 /* ManualCookieEntryView.swift */,
 			);
 			name = LeagueSetup;
 			path = LeagueSetup;
@@ -406,6 +409,7 @@
 				45B84612AC8B26754B21D303 /* RecommendationsView.swift in Sources */,
 				98BC42DAA94AC7DC798D13D4 /* LeagueSetupViewModel.swift in Sources */,
 				1AA34704BB165D21326589A8 /* LeagueSetupView.swift in Sources */,
+				761C49DBBCAA3731F69CE384 /* ManualCookieEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@ struct LeagueSetupView: View {
     @EnvironmentObject private var leagueStore: LeagueStore
     @StateObject private var viewModel = LeagueSetupViewModel()
     @State private var showingAuthSheet = false
+    @State private var showingManualEntry = false
     @State private var selectedTeamId: Int?
 
     var body: some View {
@@ -16,6 +17,12 @@ struct LeagueSetupView: View {
                         Text("Log in to ESPN to load your fantasy leagues. Your password never touches this app or Claude — only ESPN sees it.")
                             .foregroundStyle(.secondary)
                         Button("Log in to ESPN") { showingAuthSheet = true }
+                    }
+                    Section {
+                        Text("If the web login gets stuck on ESPN's homepage instead of showing a sign-in form, use this instead.")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                        Button("Enter ESPN cookies manually") { showingManualEntry = true }
                     }
                 } else {
                     Section("League") {
@@ -67,6 +74,9 @@ struct LeagueSetupView: View {
                     authManager.save(credentials)
                     showingAuthSheet = false
                 }
+            }
+            .sheet(isPresented: $showingManualEntry) {
+                ManualCookieEntryView()
             }
         }
     }
