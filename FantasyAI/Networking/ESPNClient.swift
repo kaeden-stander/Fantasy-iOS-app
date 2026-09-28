@@ -73,7 +73,7 @@ final class ESPNClient {
             let dto = try JSONDecoder().decode(ESPNLeagueDTO.self, from: data)
             return ESPNMapper.map(dto: dto, sport: sport, seasonYear: seasonYear)
         } catch {
-            let snippet = String(data: data.prefix(500), encoding: .utf8) ?? "(response wasn't text)"
+            let snippet = String(data: data.prefix(4000), encoding: .utf8) ?? "(response wasn't text)"
             throw ESPNClientError.decodingFailed(error, responseSnippet: snippet)
         }
     }

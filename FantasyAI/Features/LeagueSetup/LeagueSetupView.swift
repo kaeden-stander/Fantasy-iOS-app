@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 struct LeagueSetupView: View {
     @EnvironmentObject private var appState: AppState
@@ -48,7 +49,12 @@ struct LeagueSetupView: View {
 
                     if let error = viewModel.errorMessage {
                         Section {
-                            Text(error).foregroundStyle(.red)
+                            Text(error)
+                                .foregroundStyle(.red)
+                                .textSelection(.enabled)
+                            Button("Copy Error to Clipboard") {
+                                UIPasteboard.general.string = error
+                            }
                         }
                     }
 
