@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A2743419745C06C0CA67E13 /* RecommendationEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DCC46ACA4643BD540C3AF7A /* RecommendationEngineTests.swift */; };
+		1AA34704BB165D21326589A8 /* LeagueSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE31474C8C4581AB031A3D5D /* LeagueSetupView.swift */; };
+		1F904530B0B5C9A9FDF05AA2 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF641308B3DA44A7480D82E /* Team.swift */; };
+		27A3435A8F26133C2DBB96DF /* ESPNDTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E45D0AD83E0B9C83891E8 /* ESPNDTOs.swift */; };
+		38D74E3CA03867FB65859E78 /* LeagueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789E4694888F573BE695A15D /* LeagueStore.swift */; };
+		3C02429E9EE474D3C1F01F6F /* SecureConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CFA4D5191F54F0A79201409 /* SecureConfig.swift */; };
+		403948099C1B7EBA2E7A7F4C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CE245B39AB7C899932682AB /* Player.swift */; };
+		45B84612AC8B26754B21D303 /* RecommendationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0647FE89D85DC465748C4F /* RecommendationsView.swift */; };
+		546841C39A4E6686733266FA /* ESPNMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A274B7BA43D5FD88FE77C1A /* ESPNMapperTests.swift */; };
+		5ED04709B0AE1F105569C213 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB64FDC956180A37191DA45 /* MainTabView.swift */; };
+		6DB74EB98B93210972F1A48E /* ESPNAuthWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48AE4132BCAE79E8BCFECD50 /* ESPNAuthWebView.swift */; };
+		6EC94D4C94B1FDB7A571767E /* ClaudeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDC48F0A836D3B82C030981 /* ClaudeClient.swift */; };
+		75604C89A760273CFF103EC2 /* ESPNProTeamMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B15414CBE63618A0E50B020 /* ESPNProTeamMap.swift */; };
+		793B43E4A0F7B2D51C88FF2C /* ESPNCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73BA4C5A9F683FB885A4D93B /* ESPNCredentials.swift */; };
+		7BCA4CB0AE00D5D5257C9AB3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1140CEA6B5E59D2919F5ED /* RootView.swift */; };
+		7F734D529CBC4F0F96C0AB80 /* ESPNAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370C40A1B4D9301ABFD43B6E /* ESPNAuthManager.swift */; };
+		82B24CF98E051F53D8BA926E /* ESPNEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546648D0921776F2A7D62711 /* ESPNEndpoints.swift */; };
+		830F44DB929BF822FA38F121 /* ESPNPositionMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721746219A765893FF3B94C4 /* ESPNPositionMap.swift */; };
+		8D3F41A181ACAF73D5A235CD /* SportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46C4E359BCC1EE2F7B43EC9 /* SportTests.swift */; };
+		98BC42DAA94AC7DC798D13D4 /* LeagueSetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC4F43359EBC3B8334446EBF /* LeagueSetupViewModel.swift */; };
+		A31E4B97A2D604E35FCFEB21 /* Sport.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53A40129377E0E03DB0B1E6 /* Sport.swift */; };
+		ACD445CD8839F032CE12AE1F /* Matchup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE654EFC9F63B337CE1BAC8A /* Matchup.swift */; };
+		AD7F46FDB37919F147F0C140 /* RecommendationEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA142DF8DC689E41D54F304 /* RecommendationEngine.swift */; };
+		B117403693066CCC8046D58C /* ESPNMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574E409FBEC887F9CB4175D8 /* ESPNMapper.swift */; };
+		B3DF45F88C4E541948EFEE1F /* FantasyAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072F48218B14AB469A417510 /* FantasyAIApp.swift */; };
+		B5F44BC1BFC620CA1B633DF9 /* ESPNClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4947A9825B0AB79E4EBC8E /* ESPNClient.swift */; };
+		B86346FB8F22AD500617E459 /* TradeProposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0B4E21A6B1FF6113E9665F /* TradeProposal.swift */; };
+		BE3D48CD804E4C67F6ECAA2C /* RecommendationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA4224BD65F233E3FCE8D6 /* RecommendationsViewModel.swift */; };
+		C699454DAC13E9CB7EC03E52 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703D4CACBBBCD5378885DCAF /* KeychainStore.swift */; };
+		CA044CE192E855C47BED147B /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E64DAF90387C98F475E2CA /* Recommendation.swift */; };
+		D3454F7A90A2271AC2802DAC /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E940DF922E4292E71B9E46 /* League.swift */; };
+		D52F43EDA91B3158FEF6DC75 /* RosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30C4741877974EAECAC209B /* RosterView.swift */; };
+		DD3D42EAA603288BC0FD8834 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558A4326AF6706BB7984BD34 /* SettingsView.swift */; };
+		F09D4ECA8A9B0B07707DD4E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2C24386A12ADD633306A718 /* Assets.xcassets */; };
+		F3EC4ABDBEC15A1B5C13DA11 /* Roster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB470E9DD38EE9ABB14ECE /* Roster.swift */; };
+		F5BA481192B15E2925FA7818 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71473A874612FEB5A266EC /* AppState.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4BFD0994AF644321B8204B9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7F7DA223F0F49E4AE3622FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D99717E9B0ED43B89F7B8F33;
+			remoteInfo = FantasyAI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		072F48218B14AB469A417510 /* FantasyAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FantasyAIApp.swift; path = FantasyAIApp.swift; sourceTree = "<group>"; };
+		0A0E45D0AD83E0B9C83891E8 /* ESPNDTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNDTOs.swift; path = ESPNDTOs.swift; sourceTree = "<group>"; };
+		159D370AD0A84E4BB4442E7D /* FantasyAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FantasyAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F0B4E21A6B1FF6113E9665F /* TradeProposal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TradeProposal.swift; path = TradeProposal.swift; sourceTree = "<group>"; };
+		2CE245B39AB7C899932682AB /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Player.swift; sourceTree = "<group>"; };
+		370C40A1B4D9301ABFD43B6E /* ESPNAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNAuthManager.swift; path = ESPNAuthManager.swift; sourceTree = "<group>"; };
+		3B4947A9825B0AB79E4EBC8E /* ESPNClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNClient.swift; path = ESPNClient.swift; sourceTree = "<group>"; };
+		48AE4132BCAE79E8BCFECD50 /* ESPNAuthWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNAuthWebView.swift; path = ESPNAuthWebView.swift; sourceTree = "<group>"; };
+		4A274B7BA43D5FD88FE77C1A /* ESPNMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNMapperTests.swift; path = ESPNMapperTests.swift; sourceTree = "<group>"; };
+		4B15414CBE63618A0E50B020 /* ESPNProTeamMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNProTeamMap.swift; path = ESPNProTeamMap.swift; sourceTree = "<group>"; };
+		4FA142DF8DC689E41D54F304 /* RecommendationEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationEngine.swift; path = RecommendationEngine.swift; sourceTree = "<group>"; };
+		546648D0921776F2A7D62711 /* ESPNEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNEndpoints.swift; path = ESPNEndpoints.swift; sourceTree = "<group>"; };
+		558A4326AF6706BB7984BD34 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsView.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		56AA4224BD65F233E3FCE8D6 /* RecommendationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationsViewModel.swift; path = RecommendationsViewModel.swift; sourceTree = "<group>"; };
+		574E409FBEC887F9CB4175D8 /* ESPNMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNMapper.swift; path = ESPNMapper.swift; sourceTree = "<group>"; };
+		5B1140CEA6B5E59D2919F5ED /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RootView.swift; path = RootView.swift; sourceTree = "<group>"; };
+		5FF641308B3DA44A7480D82E /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Team.swift; path = Team.swift; sourceTree = "<group>"; };
+		6B0647FE89D85DC465748C4F /* RecommendationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationsView.swift; path = RecommendationsView.swift; sourceTree = "<group>"; };
+		6BDC48F0A836D3B82C030981 /* ClaudeClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ClaudeClient.swift; path = ClaudeClient.swift; sourceTree = "<group>"; };
+		703D4CACBBBCD5378885DCAF /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeychainStore.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		721746219A765893FF3B94C4 /* ESPNPositionMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNPositionMap.swift; path = ESPNPositionMap.swift; sourceTree = "<group>"; };
+		73BA4C5A9F683FB885A4D93B /* ESPNCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ESPNCredentials.swift; path = ESPNCredentials.swift; sourceTree = "<group>"; };
+		75E940DF922E4292E71B9E46 /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = League.swift; path = League.swift; sourceTree = "<group>"; };
+		789E4694888F573BE695A15D /* LeagueStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeagueStore.swift; path = LeagueStore.swift; sourceTree = "<group>"; };
+		7DCC46ACA4643BD540C3AF7A /* RecommendationEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecommendationEngineTests.swift; path = RecommendationEngineTests.swift; sourceTree = "<group>"; };
+		8CFA4D5191F54F0A79201409 /* SecureConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SecureConfig.swift; path = SecureConfig.swift; sourceTree = "<group>"; };
+		A2C24386A12ADD633306A718 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF71473A874612FEB5A266EC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppState.swift; path = AppState.swift; sourceTree = "<group>"; };
+		B5E64DAF90387C98F475E2CA /* Recommendation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Recommendation.swift; path = Recommendation.swift; sourceTree = "<group>"; };
+		C3CB470E9DD38EE9ABB14ECE /* Roster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Roster.swift; path = Roster.swift; sourceTree = "<group>"; };
+		CE31474C8C4581AB031A3D5D /* LeagueSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeagueSetupView.swift; path = LeagueSetupView.swift; sourceTree = "<group>"; };
+		CE654EFC9F63B337CE1BAC8A /* Matchup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Matchup.swift; path = Matchup.swift; sourceTree = "<group>"; };
+		CFB64FDC956180A37191DA45 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabView.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		DEAF985ADE534155950A69A0 /* FantasyAITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FantasyAITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E46C4E359BCC1EE2F7B43EC9 /* SportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SportTests.swift; path = SportTests.swift; sourceTree = "<group>"; };
+		EC4F43359EBC3B8334446EBF /* LeagueSetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeagueSetupViewModel.swift; path = LeagueSetupViewModel.swift; sourceTree = "<group>"; };
+		F30C4741877974EAECAC209B /* RosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RosterView.swift; path = RosterView.swift; sourceTree = "<group>"; };
+		F53A40129377E0E03DB0B1E6 /* Sport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sport.swift; path = Sport.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		135C4E2497DF7326E6F51774 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				73BA4C5A9F683FB885A4D93B /* ESPNCredentials.swift */,
+				370C40A1B4D9301ABFD43B6E /* ESPNAuthManager.swift */,
+				48AE4132BCAE79E8BCFECD50 /* ESPNAuthWebView.swift */,
+			);
+			name = Auth;
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		19ED4A50A6A9DC70E38EE7E3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				558A4326AF6706BB7984BD34 /* SettingsView.swift */,
+			);
+			name = Settings;
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4A0845188EC14D12185A4FED /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5B1140CEA6B5E59D2919F5ED /* RootView.swift */,
+				072F48218B14AB469A417510 /* FantasyAIApp.swift */,
+				AF71473A874612FEB5A266EC /* AppState.swift */,
+				CFB64FDC956180A37191DA45 /* MainTabView.swift */,
+			);
+			name = App;
+			path = App;
+			sourceTree = "<group>";
+		};
+		61864C8685C97E5741A7A7A3 /* LeagueSetup */ = {
+			isa = PBXGroup;
+			children = (
+				EC4F43359EBC3B8334446EBF /* LeagueSetupViewModel.swift */,
+				CE31474C8C4581AB031A3D5D /* LeagueSetupView.swift */,
+			);
+			name = LeagueSetup;
+			path = LeagueSetup;
+			sourceTree = "<group>";
+		};
+		63754428A5B505B4888FEC9A /* FantasyAI */ = {
+			isa = PBXGroup;
+			children = (
+				E3654131B01747AA698BBD38 /* Models */,
+				135C4E2497DF7326E6F51774 /* Auth */,
+				CF754BB78906EF5730FC460C /* Networking */,
+				94C24F768267FA962B347D0D /* Recommendations */,
+				4A0845188EC14D12185A4FED /* App */,
+				D01443DA9F14850968FC2AD5 /* Resources */,
+				6EA24208B50B67760161A119 /* Persistence */,
+				CF324EFEB4AF8E3CE588FC84 /* Features */,
+			);
+			name = FantasyAI;
+			path = FantasyAI;
+			sourceTree = "<group>";
+		};
+		672F43EDAD3A9258ACD9A6C8 /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				56AA4224BD65F233E3FCE8D6 /* RecommendationsViewModel.swift */,
+				6B0647FE89D85DC465748C4F /* RecommendationsView.swift */,
+			);
+			name = Recommendations;
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		6EA24208B50B67760161A119 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				789E4694888F573BE695A15D /* LeagueStore.swift */,
+				703D4CACBBBCD5378885DCAF /* KeychainStore.swift */,
+				8CFA4D5191F54F0A79201409 /* SecureConfig.swift */,
+			);
+			name = Persistence;
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		7F784807A4DDA83EC460694E /* FantasyAITests */ = {
+			isa = PBXGroup;
+			children = (
+				4A274B7BA43D5FD88FE77C1A /* ESPNMapperTests.swift */,
+				E46C4E359BCC1EE2F7B43EC9 /* SportTests.swift */,
+				7DCC46ACA4643BD540C3AF7A /* RecommendationEngineTests.swift */,
+			);
+			name = FantasyAITests;
+			path = FantasyAITests;
+			sourceTree = "<group>";
+		};
+		94C24F768267FA962B347D0D /* Recommendations */ = {
+			isa = PBXGroup;
+			children = (
+				4FA142DF8DC689E41D54F304 /* RecommendationEngine.swift */,
+			);
+			name = Recommendations;
+			path = Recommendations;
+			sourceTree = "<group>";
+		};
+		979B2EE7A44D437FAA07A55D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				159D370AD0A84E4BB4442E7D /* FantasyAI.app */,
+				DEAF985ADE534155950A69A0 /* FantasyAITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CBC488BB7906CC98679DEA9 /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				F30C4741877974EAECAC209B /* RosterView.swift */,
+			);
+			name = Roster;
+			path = Roster;
+			sourceTree = "<group>";
+		};
+		CA05CE1779A54AB2BFCEABFC = {
+			isa = PBXGroup;
+			children = (
+				979B2EE7A44D437FAA07A55D /* Products */,
+				63754428A5B505B4888FEC9A /* FantasyAI */,
+				7F784807A4DDA83EC460694E /* FantasyAITests */,
+			);
+			sourceTree = "<group>";
+		};
+		CF324EFEB4AF8E3CE588FC84 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				9CBC488BB7906CC98679DEA9 /* Roster */,
+				19ED4A50A6A9DC70E38EE7E3 /* Settings */,
+				672F43EDAD3A9258ACD9A6C8 /* Recommendations */,
+				61864C8685C97E5741A7A7A3 /* LeagueSetup */,
+			);
+			name = Features;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		CF754BB78906EF5730FC460C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				574E409FBEC887F9CB4175D8 /* ESPNMapper.swift */,
+				3B4947A9825B0AB79E4EBC8E /* ESPNClient.swift */,
+				721746219A765893FF3B94C4 /* ESPNPositionMap.swift */,
+				4B15414CBE63618A0E50B020 /* ESPNProTeamMap.swift */,
+				0A0E45D0AD83E0B9C83891E8 /* ESPNDTOs.swift */,
+				6BDC48F0A836D3B82C030981 /* ClaudeClient.swift */,
+				546648D0921776F2A7D62711 /* ESPNEndpoints.swift */,
+			);
+			name = Networking;
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D01443DA9F14850968FC2AD5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A2C24386A12ADD633306A718 /* Assets.xcassets */,
+			);
+			name = Resources;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E3654131B01747AA698BBD38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F53A40129377E0E03DB0B1E6 /* Sport.swift */,
+				B5E64DAF90387C98F475E2CA /* Recommendation.swift */,
+				75E940DF922E4292E71B9E46 /* League.swift */,
+				2CE245B39AB7C899932682AB /* Player.swift */,
+				1F0B4E21A6B1FF6113E9665F /* TradeProposal.swift */,
+				CE654EFC9F63B337CE1BAC8A /* Matchup.swift */,
+				5FF641308B3DA44A7480D82E /* Team.swift */,
+				C3CB470E9DD38EE9ABB14ECE /* Roster.swift */,
+			);
+			name = Models;
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88340D57B7D749BDA7867F1D /* FantasyAITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3AAF755FE094E129BC9807E /* Build configuration list for PBXNativeTarget "FantasyAITests" */;
+			buildPhases = (
+				8DD04DA5AD2DA8D907269B57 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F79DFE69A144D65B4E12DD5 /* PBXTargetDependency */,
+			);
+			name = FantasyAITests;
+			productName = FantasyAITests;
+			productReference = DEAF985ADE534155950A69A0 /* FantasyAITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D99717E9B0ED43B89F7B8F33 /* FantasyAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19438362621F440E91A58DF2 /* Build configuration list for PBXNativeTarget "FantasyAI" */;
+			buildPhases = (
+				EE41461D868056A5F75CAD9F /* Sources */,
+				527C4D82A483ADA5F37BE6EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FantasyAI;
+			productName = FantasyAI;
+			productReference = 159D370AD0A84E4BB4442E7D /* FantasyAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7F7DA223F0F49E4AE3622FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					88340D57B7D749BDA7867F1D = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D99717E9B0ED43B89F7B8F33;
+					};
+					D99717E9B0ED43B89F7B8F33 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = D8DF2EF18FF74640A514671E /* Build configuration list for PBXProject "FantasyAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA05CE1779A54AB2BFCEABFC;
+			productRefGroup = 979B2EE7A44D437FAA07A55D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D99717E9B0ED43B89F7B8F33 /* FantasyAI */,
+				88340D57B7D749BDA7867F1D /* FantasyAITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		527C4D82A483ADA5F37BE6EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F09D4ECA8A9B0B07707DD4E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD04DA5AD2DA8D907269B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				546841C39A4E6686733266FA /* ESPNMapperTests.swift in Sources */,
+				8D3F41A181ACAF73D5A235CD /* SportTests.swift in Sources */,
+				1A2743419745C06C0CA67E13 /* RecommendationEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE41461D868056A5F75CAD9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A31E4B97A2D604E35FCFEB21 /* Sport.swift in Sources */,
+				CA044CE192E855C47BED147B /* Recommendation.swift in Sources */,
+				D3454F7A90A2271AC2802DAC /* League.swift in Sources */,
+				403948099C1B7EBA2E7A7F4C /* Player.swift in Sources */,
+				B86346FB8F22AD500617E459 /* TradeProposal.swift in Sources */,
+				ACD445CD8839F032CE12AE1F /* Matchup.swift in Sources */,
+				1F904530B0B5C9A9FDF05AA2 /* Team.swift in Sources */,
+				F3EC4ABDBEC15A1B5C13DA11 /* Roster.swift in Sources */,
+				793B43E4A0F7B2D51C88FF2C /* ESPNCredentials.swift in Sources */,
+				7F734D529CBC4F0F96C0AB80 /* ESPNAuthManager.swift in Sources */,
+				6DB74EB98B93210972F1A48E /* ESPNAuthWebView.swift in Sources */,
+				B117403693066CCC8046D58C /* ESPNMapper.swift in Sources */,
+				B5F44BC1BFC620CA1B633DF9 /* ESPNClient.swift in Sources */,
+				830F44DB929BF822FA38F121 /* ESPNPositionMap.swift in Sources */,
+				75604C89A760273CFF103EC2 /* ESPNProTeamMap.swift in Sources */,
+				27A3435A8F26133C2DBB96DF /* ESPNDTOs.swift in Sources */,
+				6EC94D4C94B1FDB7A571767E /* ClaudeClient.swift in Sources */,
+				82B24CF98E051F53D8BA926E /* ESPNEndpoints.swift in Sources */,
+				AD7F46FDB37919F147F0C140 /* RecommendationEngine.swift in Sources */,
+				7BCA4CB0AE00D5D5257C9AB3 /* RootView.swift in Sources */,
+				B3DF45F88C4E541948EFEE1F /* FantasyAIApp.swift in Sources */,
+				F5BA481192B15E2925FA7818 /* AppState.swift in Sources */,
+				5ED04709B0AE1F105569C213 /* MainTabView.swift in Sources */,
+				38D74E3CA03867FB65859E78 /* LeagueStore.swift in Sources */,
+				C699454DAC13E9CB7EC03E52 /* KeychainStore.swift in Sources */,
+				3C02429E9EE474D3C1F01F6F /* SecureConfig.swift in Sources */,
+				D52F43EDA91B3158FEF6DC75 /* RosterView.swift in Sources */,
+				DD3D42EAA603288BC0FD8834 /* SettingsView.swift in Sources */,
+				BE3D48CD804E4C67F6ECAA2C /* RecommendationsViewModel.swift in Sources */,
+				45B84612AC8B26754B21D303 /* RecommendationsView.swift in Sources */,
+				98BC42DAA94AC7DC798D13D4 /* LeagueSetupViewModel.swift in Sources */,
+				1AA34704BB165D21326589A8 /* LeagueSetupView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F79DFE69A144D65B4E12DD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D99717E9B0ED43B89F7B8F33 /* FantasyAI */;
+			targetProxy = 4BFD0994AF644321B8204B9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20B754FEDD624CCD96B4E045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Resources",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fantasy AI";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Models",
+					"$(SRCROOT)/FantasyAI/Auth",
+					"$(SRCROOT)/FantasyAI/Networking",
+					"$(SRCROOT)/FantasyAI/Recommendations",
+					"$(SRCROOT)/FantasyAI/App",
+					"$(SRCROOT)/FantasyAI/Persistence",
+					"$(SRCROOT)/FantasyAI/Features/Roster",
+					"$(SRCROOT)/FantasyAI/Features/Settings",
+					"$(SRCROOT)/FantasyAI/Features/Recommendations",
+					"$(SRCROOT)/FantasyAI/Features/LeagueSetup",
+					"$(SRCROOT)/FantasyAITests",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantasyai.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		456F63C6DB104C2BB0C20E35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C217DA6832E410E9D5F33A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6A3E41E77A8B4426AF1448C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Resources",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Models",
+					"$(SRCROOT)/FantasyAI/Auth",
+					"$(SRCROOT)/FantasyAI/Networking",
+					"$(SRCROOT)/FantasyAI/Recommendations",
+					"$(SRCROOT)/FantasyAI/App",
+					"$(SRCROOT)/FantasyAI/Persistence",
+					"$(SRCROOT)/FantasyAI/Features/Roster",
+					"$(SRCROOT)/FantasyAI/Features/Settings",
+					"$(SRCROOT)/FantasyAI/Features/Recommendations",
+					"$(SRCROOT)/FantasyAI/Features/LeagueSetup",
+					"$(SRCROOT)/FantasyAITests",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantasyai.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasyAI.app/FantasyAI";
+			};
+			name = Debug;
+		};
+		7AD0E17D701B4A22853099E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Resources",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Models",
+					"$(SRCROOT)/FantasyAI/Auth",
+					"$(SRCROOT)/FantasyAI/Networking",
+					"$(SRCROOT)/FantasyAI/Recommendations",
+					"$(SRCROOT)/FantasyAI/App",
+					"$(SRCROOT)/FantasyAI/Persistence",
+					"$(SRCROOT)/FantasyAI/Features/Roster",
+					"$(SRCROOT)/FantasyAI/Features/Settings",
+					"$(SRCROOT)/FantasyAI/Features/Recommendations",
+					"$(SRCROOT)/FantasyAI/Features/LeagueSetup",
+					"$(SRCROOT)/FantasyAITests",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantasyai.app.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FantasyAI.app/FantasyAI";
+			};
+			name = Release;
+		};
+		F903245F28234EE3907B1E9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Resources",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Fantasy AI";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/FantasyAI/Models",
+					"$(SRCROOT)/FantasyAI/Auth",
+					"$(SRCROOT)/FantasyAI/Networking",
+					"$(SRCROOT)/FantasyAI/Recommendations",
+					"$(SRCROOT)/FantasyAI/App",
+					"$(SRCROOT)/FantasyAI/Persistence",
+					"$(SRCROOT)/FantasyAI/Features/Roster",
+					"$(SRCROOT)/FantasyAI/Features/Settings",
+					"$(SRCROOT)/FantasyAI/Features/Recommendations",
+					"$(SRCROOT)/FantasyAI/Features/LeagueSetup",
+					"$(SRCROOT)/FantasyAITests",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fantasyai.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19438362621F440E91A58DF2 /* Build configuration list for PBXNativeTarget "FantasyAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F903245F28234EE3907B1E9E /* Debug */,
+				20B754FEDD624CCD96B4E045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8DF2EF18FF74640A514671E /* Build configuration list for PBXProject "FantasyAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C217DA6832E410E9D5F33A4 /* Debug */,
+				456F63C6DB104C2BB0C20E35 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3AAF755FE094E129BC9807E /* Build configuration list for PBXNativeTarget "FantasyAITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A3E41E77A8B4426AF1448C6 /* Debug */,
+				7AD0E17D701B4A22853099E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7F7DA223F0F49E4AE3622FA /* Project object */;
+}
