@@ -3,16 +3,19 @@ import Foundation
 enum ESPNClientError: LocalizedError {
     case invalidResponse
     case httpError(Int)
-    case decodingFailed(Error)
+    case leagueNotFound
+    case decodingFailed(Error, responseSnippet: String)
 
     var errorDescription: String? {
         switch self {
         case .invalidResponse:
             return "ESPN returned an unexpected response."
         case .httpError(let code):
-            return "ESPN returned HTTP \(code). If this is a private league, make sure you're logged in with an account that's a member of it."
-        case .decodingFailed:
-            return "ESPN's response didn't match what this app expected. ESPN's fantasy API is unofficial and can change without notice."
+            return "ESPN returned HTTP \(code). If this is a private league, make sure the cookies are from an account that's a member of it, and that they haven't expired."
+        case .leagueNotFound:
+            return "ESPN says this league doesn't exist for that sport and season. Double-check the league ID, the sport, and the season year — the league ID is the number after \"leagueId=\" when you view your league on espn.com."
+        case .decodingFailed(_, let snippet):
+            return "ESPN's response didn't match what this app expected (its fantasy API is unofficial and can change). What ESPN actually sent back:\n\n\(snippet)"
         }
     }
 }
@@ -51,11 +54,20 @@ final class ESPNClient {
             throw ESPNClientError.httpError(httpResponse.statusCode)
         }
 
+        // ESPN answers a league ID that doesn't exist for this sport/season with an empty
+        // JSON array (HTTP 200) instead of an error status, so check for that before trying
+        // to decode it as a league object.
+        if let firstNonWhitespace = data.first(where: { $0 != 0x20 && $0 != 0x0A && $0 != 0x09 }),
+           firstNonWhitespace == UInt8(ascii: "[") {
+            throw ESPNClientError.leagueNotFound
+        }
+
         do {
             let dto = try JSONDecoder().decode(ESPNLeagueDTO.self, from: data)
             return ESPNMapper.map(dto: dto, sport: sport, seasonYear: seasonYear)
         } catch {
-            throw ESPNClientError.decodingFailed(error)
+            let snippet = String(data: data.prefix(500), encoding: .utf8) ?? "(response wasn't text)"
+            throw ESPNClientError.decodingFailed(error, responseSnippet: snippet)
         }
     }
 }
