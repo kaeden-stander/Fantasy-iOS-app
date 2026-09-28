@@ -20,6 +20,7 @@ struct ESPNSettingsDTO: Decodable {
 
 struct ESPNTeamDTO: Decodable {
     let id: Int
+    let name: String?
     let location: String?
     let nickname: String?
     let owners: [String]?

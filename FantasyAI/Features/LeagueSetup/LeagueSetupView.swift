@@ -36,7 +36,11 @@ struct LeagueSetupView: View {
                             .keyboardType(.numberPad)
                         Stepper("Season \(viewModel.seasonYear)", value: $viewModel.seasonYear, in: 2018...2100)
                         Button {
-                            Task { await viewModel.fetchLeague(using: appState.espnClient) }
+                            Task {
+                                selectedTeamId = nil
+                                await viewModel.fetchLeague(using: appState.espnClient)
+                                selectedTeamId = matchedTeamId(in: viewModel.fetchedLeague)
+                            }
                         } label: {
                             if viewModel.isLoading {
                                 ProgressView()
@@ -60,6 +64,15 @@ struct LeagueSetupView: View {
 
                     if let league = viewModel.fetchedLeague {
                         Section("Which team is yours?") {
+                            if matchedTeamId(in: league) != nil {
+                                Text("Matched to your ESPN account. Change it below if that's wrong.")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            } else {
+                                Text("Couldn't match a team to your ESPN account automatically — pick yours.")
+                                    .font(.caption)
+                                    .foregroundStyle(.secondary)
+                            }
                             Picker("My team", selection: $selectedTeamId) {
                                 Text("Choose a team").tag(Int?.none)
                                 ForEach(league.teams) { team in
@@ -85,6 +98,15 @@ struct LeagueSetupView: View {
                 ManualCookieEntryView()
             }
         }
+    }
+
+    /// Finds the team whose owners include the signed-in user's ESPN member GUID (the
+    /// SWID cookie value), so people don't have to guess which numbered team is theirs.
+    private func matchedTeamId(in league: League?) -> Int? {
+        guard let league, let swid = authManager.credentials?.swid else { return nil }
+        return league.teams.first { team in
+            team.ownerGUIDs.contains { $0.caseInsensitiveCompare(swid) == .orderedSame }
+        }?.id
     }
 
     private func saveLeague(_ league: League) {

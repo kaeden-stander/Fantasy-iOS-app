@@ -17,7 +17,7 @@ final class RecommendationEngineTests: XCTestCase {
             RosterSlot(player: starter, lineupSlot: "QB", isStarting: true),
             RosterSlot(player: benchPlayer, lineupSlot: "BENCH", isStarting: false)
         ])
-        return Team(id: 1, name: "My Team", ownerName: "Me", wins: 5, losses: 2, ties: 0, pointsFor: 500, pointsAgainst: 400, roster: roster)
+        return Team(id: 1, name: "My Team", ownerName: "Me", ownerGUIDs: ["{ABC-123}"], wins: 5, losses: 2, ties: 0, pointsFor: 500, pointsAgainst: 400, roster: roster)
     }
 
     func testStartSitPromptMentionsEveryRosterPlayer() {

@@ -18,7 +18,7 @@ enum ESPNMapper {
     }
 
     private static func mapTeam(_ dto: ESPNTeamDTO, sport: Sport, scoringPeriodId: Int) -> Team {
-        let name = [dto.location, dto.nickname].compactMap { $0 }.joined(separator: " ")
+        let name = resolvedTeamName(dto)
         let record = dto.record?.overall
         let roster = dto.roster.map { rosterDTO in
             Roster(
@@ -28,8 +28,9 @@ enum ESPNMapper {
         }
         return Team(
             id: dto.id,
-            name: name.isEmpty ? "Team \(dto.id)" : name,
+            name: name,
             ownerName: dto.owners?.first ?? "Unknown",
+            ownerGUIDs: dto.owners ?? [],
             wins: record?.wins ?? 0,
             losses: record?.losses ?? 0,
             ties: record?.ties ?? 0,
@@ -37,6 +38,18 @@ enum ESPNMapper {
             pointsAgainst: record?.pointsAgainst ?? 0,
             roster: roster
         )
+    }
+
+    /// ESPN used to split a team's name into separate "location" and "nickname" fields
+    /// (e.g. "My" + "Team"); newer responses use a single "name" field instead. Prefer
+    /// whichever one is actually populated.
+    private static func resolvedTeamName(_ dto: ESPNTeamDTO) -> String {
+        if let name = dto.name, !name.trimmingCharacters(in: .whitespaces).isEmpty {
+            return name
+        }
+        let joined = [dto.location, dto.nickname].compactMap { $0 }.joined(separator: " ")
+        let trimmed = joined.trimmingCharacters(in: .whitespaces)
+        return trimmed.isEmpty ? "Team \(dto.id)" : trimmed
     }
 
     private static func mapRosterEntry(_ dto: ESPNRosterEntryDTO, sport: Sport, scoringPeriodId: Int) -> RosterSlot {
