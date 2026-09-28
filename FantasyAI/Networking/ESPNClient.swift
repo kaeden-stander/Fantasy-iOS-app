@@ -3,6 +3,7 @@ import Foundation
 enum ESPNClientError: LocalizedError {
     case invalidResponse
     case httpError(Int)
+    case redirected(status: Int, location: String?)
     case leagueNotFound
     case decodingFailed(Error, responseSnippet: String)
 
@@ -12,6 +13,10 @@ enum ESPNClientError: LocalizedError {
             return "ESPN returned an unexpected response."
         case .httpError(let code):
             return "ESPN returned HTTP \(code). If this is a private league, make sure the cookies are from an account that's a member of it, and that they haven't expired."
+        case .redirected(let status, let location):
+            return "ESPN redirected this request (HTTP \(status)) instead of answering it directly"
+                + (location.map { " — to: \($0)" } ?? "")
+                + ". That usually means this API path has moved or been retired."
         case .leagueNotFound:
             return "ESPN says this league doesn't exist for that sport and season. Double-check the league ID, the sport, and the season year — the league ID is the number after \"leagueId=\" when you view your league on espn.com."
         case .decodingFailed(_, let snippet):
@@ -20,15 +25,34 @@ enum ESPNClientError: LocalizedError {
     }
 }
 
+/// Denies HTTP redirects instead of silently following them. ESPN's unofficial API can
+/// redirect an old/moved path to a generic marketing page with an ordinary 200 status,
+/// which would otherwise look just like a successful-but-wrong response. Blocking the
+/// redirect surfaces it as what it actually is.
+private final class RedirectBlockingDelegate: NSObject, URLSessionTaskDelegate {
+    func urlSession(
+        _ session: URLSession,
+        task: URLSessionTask,
+        willPerformHTTPRedirection response: HTTPURLResponse,
+        newRequest request: URLRequest,
+        completionHandler: @escaping (URLRequest?) -> Void
+    ) {
+        completionHandler(nil)
+    }
+}
+
 /// Talks to ESPN's unofficial fantasy sports API. Private leagues require the SWID and
 /// espn_s2 cookies from a logged-in ESPN session (see ESPNAuthManager); public leagues
 /// work without them.
 final class ESPNClient {
     private let session: URLSession
+    private let redirectDelegate: RedirectBlockingDelegate
     private let credentialsProvider: () -> ESPNCredentials?
 
-    init(session: URLSession = .shared, credentialsProvider: @escaping () -> ESPNCredentials?) {
-        self.session = session
+    init(credentialsProvider: @escaping () -> ESPNCredentials?) {
+        let delegate = RedirectBlockingDelegate()
+        self.redirectDelegate = delegate
+        self.session = URLSession(configuration: .ephemeral, delegate: delegate, delegateQueue: nil)
         self.credentialsProvider = credentialsProvider
     }
 
@@ -56,6 +80,11 @@ final class ESPNClient {
         let (data, response) = try await session.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse else {
             throw ESPNClientError.invalidResponse
+        }
+
+        if (300..<400).contains(httpResponse.statusCode) {
+            let location = httpResponse.value(forHTTPHeaderField: "Location")
+            throw ESPNClientError.redirected(status: httpResponse.statusCode, location: location)
         }
         guard (200..<300).contains(httpResponse.statusCode) else {
             throw ESPNClientError.httpError(httpResponse.statusCode)
