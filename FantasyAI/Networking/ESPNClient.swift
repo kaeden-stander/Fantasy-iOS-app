@@ -42,6 +42,13 @@ final class ESPNClient {
 
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Accept")
+        // Without a browser-like User-Agent, ESPN's edge sometimes routes requests to its
+        // generic Fantasy Games marketing page instead of the JSON API — this is the app's
+        // default request identity otherwise (e.g. "FantasyAI/1 CFNetwork/... Darwin/...").
+        request.setValue(
+            "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+            forHTTPHeaderField: "User-Agent"
+        )
         if let credentials = credentialsProvider() {
             request.setValue("SWID=\(credentials.swid); espn_s2=\(credentials.espnS2)", forHTTPHeaderField: "Cookie")
         }
